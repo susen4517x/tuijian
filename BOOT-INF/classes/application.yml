@@ -1,0 +1,27 @@
+server:
+  port: 18080
+
+application:
+  prediction:
+    event-server: http://127.0.0.1:7070
+    engine-server: http://127.0.0.1:8000
+    access-key: 
+
+spring:
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    suffix: .ftl
+    template-loader-path: file:templates
+    settings.object_wrapper: freemarker.ext.beans.BeansWrapper
+    settings.number_format: #.##
+    settings.boolean_format: true,false
+    settings.url_escaping_charset: utf-8
+    settings.date_format: yyyy-MM-dd HH:mm:ss
+    settings.datetime_format: yyyy-MM-dd HH:mm:ss
